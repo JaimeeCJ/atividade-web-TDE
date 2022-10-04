@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="w3.css">
     <title>Document</title>
 </head>
@@ -16,7 +14,7 @@
     <header>
         <section>
             <nav>
-                <a href="index.html" class="third">Desenhos</a>
+                <a href="desenhos.html" class="third">Desenhos</a>
                 <a href="novelas.html" class="third">Novelas</a>
                 <a href="calendario.html" class="third">Calendario</a>
             </nav>
@@ -32,7 +30,6 @@
                     <p data-video="lPOjZauruEk"></p>
 
                     <div id="player"></div>
-                    <p id="demo" style="color:white"></p>
 
                 </div>
 
@@ -49,14 +46,6 @@
 <script src="http://www.youtube.com/player_api"></script>
 
 <script>
-    var today = new Date();
-    minutos =today.getMinutes();
-    if(minutos <10)
-    {
-        minutos = "0" + today.getMinutes();
-    }
-    var time = today.getHours() + ":" + minutos + ":" + today.getSeconds();
-    document.getElementById("demo").innerHTML = time;
 
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.ENDED) {
@@ -91,8 +80,6 @@
         var video_id = $('[data-video]').eq(player.current_video).attr('data-video');
         player.loadVideoById(video_id, 5, "large")
     }
-    
-    
 </script>
 
 </html>
