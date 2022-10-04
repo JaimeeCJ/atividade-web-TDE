@@ -7,59 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/w3.css">
-    <title>Document</title>
+    <title>Desenhos</title>
 </head>
 
 <body>
     <header>
         <section>
             <nav>
-              <a href="index2.html" class="third">Nada1</a>
-              <a href="index.html" class="third">Nada2</a>
-              <a href="index3.html" class="third">Nada3</a>
+                <a href="desenhos.html" class="third">Desenhos</a>
+                <a href="novelas.html" class="third">Novelas</a>
+                <a href="calendario.html" class="third">Calendario</a>
             </nav>
         </section>
     </header>
     <main>
         <section>
-            <div class="content">
-                <div class="w3-half">
-                    <img style="width:300px" src="/assets/angolano.png" alt="">
+            <div>
+                <div>
+
+                    <p data-video="KBSPG5oCuS8"></p>
+                    <p data-video="dTEDhPwmxKw"></p>
+                    <p data-video="lPOjZauruEk"></p>
+
+                    <div id="player"></div>
 
                 </div>
-
-                <div class="w3-half" style="color: aliceblue;">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique soluta alias tempore
-                        voluptatem<br> cupiditate quod hic sint fuga aut quos, debitis consequatur nobis blanditiis
-                        ullam
-                        recusandae incidunt<br> sequi explicabo nemo nesciunt corporis. Sed, alias eaque corporis error
-                        aspernatur facere modi est<br> corrupti numquam soluta omnis asperiores. Ipsa est eos at.</p>
-
-                </div>
-            </div>
 
         </section>
-        <section>
-            <div class="content" style="margin-top: 500px;">
-                <div class="w3-half">
-                    <img style="width:300px" src="/assets/angolano.png" alt="">
 
-                </div>
 
-                <div class="w3-half" style="color: aliceblue;">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique soluta alias tempore
-                        voluptatem<br> cupiditate quod hic sint fuga aut quos, debitis consequatur nobis blanditiis
-                        ullam
-                        recusandae incidunt<br> sequi explicabo nemo nesciunt corporis. Sed, alias eaque corporis error
-                        aspernatur facere modi est<br> corrupti numquam soluta omnis asperiores. Ipsa est eos at.</p>
-
-                </div>
-            </div>
-
-        </section>
-        
     </main>
     <footer>
         <section>
@@ -67,5 +43,43 @@
         </section>
     </footer>
 </body>
+<script src="http://www.youtube.com/player_api"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            // your code to run after video has ended
+            player.current_video++;
+            playVideo()
+        }
+    }
+
+    var player = document.querySelector('iframe');
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '560',
+            width: '1008',
+            videoId: 'KBSPG5oCuS8',
+            playerVars: { 'autoplay': 1, 'start': 122 },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+
+        });
+        // Create a property on the player object to keep track of the current video index
+        player.current_video = 0;
+    }
+
+    $('[data-video]').click(function () {
+        player.current_video = $(this).index();
+        playVideo();
+    })
+
+    function playVideo() {
+        var video_id = $('[data-video]').eq(player.current_video).attr('data-video');
+        player.loadVideoById(video_id, 5, "large")
+    }
+</script>
 
 </html>
