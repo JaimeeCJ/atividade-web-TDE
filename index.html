@@ -1,85 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="w3.css">
-    <title>Desenhos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>TELE SI</title>
 </head>
 
 <body>
+  <section>
+    <div class="circle"></div>
     <header>
-        <section>
-            <nav>
-                <a href="index.html" class="third">Desenhos</a>
-                <a href="novelas.html" class="third">Novelas</a>
-                <a href="calendario.html" class="third">Calendario</a>
-            </nav>
-        </section>
+      <a href="a"><img src="assets/logo.png" alt="logo" class="logo"></a>
+      <nav class="navegation">
+        <ul>
+          <li><a href="a">Home</a></li>
+          <li><a href="a">Programação do dia</a></li>
+          <li><a href="a">Sugestões</a></li>
+          <li><a href="desenhos.html">Player Online</a></li>
+      </nav>
+
+      </ul>
+      </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <div>
-
-                    <p data-video="KBSPG5oCuS8"></p>
-                    <p data-video="dTEDhPwmxKw"></p>
-                    <p data-video="lPOjZauruEk"></p>
-
-                    <div id="player"></div>
-
-                </div>
-
-        </section>
-
-
-    </main>
-    <footer>
-        <section>
-
-        </section>
-    </footer>
+    <div class="container">
+      <div class="text">
+        <h2>Melhores <br> <span> DESENHOS</span></h2>
+        <p>
+          <a href="novelas.html">Ir para o player ao vivo</a>
+      </div>
+    </div>
+  </section>>
 </body>
-<script src="http://www.youtube.com/player_api"></script>
-<script src="jquery-3.6.0.min.js"></script>
-<script>
-
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            // your code to run after video has ended
-            player.current_video++;
-            playVideo()
-        }
-    }
-
-    var player = document.querySelector('iframe');
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '560',
-            width: '1008',
-            videoId: 'KBSPG5oCuS8',
-            playerVars: { 'autoplay': 1, 'start': 122 },
-            events: {
-                'onStateChange': onPlayerStateChange
-            }
-
-        });
-        // Create a property on the player object to keep track of the current video index
-        player.current_video = 0;
-    }
-
-    $('[data-video]').click(function () {
-        player.current_video = $(this).index();
-        playVideo();
-    })
-
-    function playVideo() {
-        var video_id = $('[data-video]').eq(player.current_video).attr('data-video');
-        player.loadVideoById(video_id, 5, "large")
-    }
-</script>
 
 </html>
