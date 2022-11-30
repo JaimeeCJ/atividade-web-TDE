@@ -50,7 +50,7 @@
     }
     var time = today.getHours() + ":" + minutos + ":" + today.getSeconds();
     document.getElementById("time").innerHTML = time;
-
+    
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.ENDED) {
             // your code to run after video has ended
@@ -58,7 +58,7 @@
             playVideo()
         }
     }
-
+    
     var player = document.querySelector('iframe');
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
@@ -69,23 +69,21 @@
             events: {
                 'onStateChange': onPlayerStateChange
             }
-
+    
         });
         // Create a property on the player object to keep track of the current video index
         player.current_video = 0;
     }
-
+    
     $('[data-video]').click(function () {
         player.current_video = $(this).index();
         playVideo();
     })
-
+    
     function playVideo() {
         var video_id = $('[data-video]').eq(player.current_video).attr('data-video');
         player.loadVideoById(video_id, 5, "large")
     }
-
-
-</script>
+    </script>
 
 </html>
