@@ -7,150 +7,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styleprogramacao.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
+
   <title>Programação do Dia</title>
 </head>
 
 
 <body>
 
-  <header style="position:relative;">
+  <header style="position:static;">
     <a href="./index.html"><img src="assets/logo2.png" alt="logo" class="logo"></a>
     <nav class="nav nav-masthead justify-content-center float-md-end">
       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="./index.html">Home</a>
-      <a class="nav-link fw-bold py-1 px-0" href="./programacaododia.html">Programação do dia</a>
-      <a class="nav-link fw-bold py-1 px-0" href="./novelas.html">Novelas</a>
+      <a class="nav-link dropdown-toggle fw-bold py-1 px-0 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Programação do Dia
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="./programacaododia.html">Desenhos</a></li>
+        <li><a class="dropdown-item" href="./programacaododianovela.html">Novelas</a></li>
+      </ul>
+      <a class="nav-link fw-bold py-1 px-0" href="./novelas.html">ㅤNovelas</a>
       <a class="nav-link fw-bold py-1 px-0" href="./desenhos.html">Desenhos</a>
     </nav>
   </header>
 
   <main class="container">
-    
+
     <!--BootStrap carrousel-->
-    <div id="carouselExampleCaptions" class="rounded-4 carousel slide" data-bs-ride="false">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./assets/scoobydoook.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Scoobyy</h5>
-            <p>Alguma mensagem</p>
-          </div>
+          <img src="./assets/bob-esponja.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./assets/bobesponjaok.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
+          <img src="./assets/scoob-doo.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./assets/meninassuperpoderosasok.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/picapauok.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/picapau.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/picapau.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/asmeninassuperpoderosas.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
+          <img src="./assets/superchoque.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
     <!--BootStrap carrousel-->
-    
-    <div class="row mt-5 p-1 text-secondary">
+
+    <div class="row mt-5 p-1 ">
       <div class="col-lg-4">
-        <img src="./assets/bob-esponja.jpg" alt="" class="img-capa rounded-3">
-  
-        <h2 class="fw-normal">Bob Esponja</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first
-          column.</p>
-        
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/asmeninassuperpoderosas.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">As meninas super poderosas</h5>
+            <p class="card-text">Os personagens principais são Florzinha, Lindinha e Docinho, três meninas do jardim de
+              infância com super-poderes, o Professor Utônio, pai das meninas e um cientista. As meninas são
+              freqüentemente chamadas pelo Prefeito da cidade para
+              ajudar a combater criminosos e monstros usando seus poderes.</p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
+
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img src="./assets/bobesponjaok.jpg" alt="" class="img-capa rounded-3">
-  
-        <h2 class="fw-normal">Digimon</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/bob-esponja.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bob Esponja</h5>
+            <p class="card-text">Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação
+              na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando
+              confusões com seu melhor amigo, a estrela-do-mar Patrick</p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img src="./assets/picapau.jpg"  alt="" class="img-capa rounded-3">
-  
-        <h2 class="fw-normal">Pica Pau</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="./assets/paginainicial.jpg" alt="" class="img-capa rounded-3">
-  
-       <h2 class="fw-normal">A caverna do Dragão</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="./assets/scoob-doo.jpg" alt="" class="img-capa rounded-3">
-  
-        <h2 class="fw-normal">Scoob Doo</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="./assets/asmeninassuperpoderosas.jpg" alt="" class="img-capa rounded-3">
-  
-        <h2 class="fw-normal">As meninas Super Poderosas</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/digimon-destacada.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Digimon</h5>
+            <p class="card-text">Um grupo de sete crianças é levado para outro mundo - o Digital World - que descobrem
+              ser uma realidade paralela habitada por criaturas chamadas Digimon. Lá, descobrem que foram escolhidas
+              para salvar o Digital World das forças do mal que ameaçam destruí-lo</p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
     </div>
-    
-  </div>
-  
-  
+    <div class="row mt-5 p-1 ">
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/picapau.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pica-Pau</h5>
+            <p class="card-text"> O travesso Pica-Pau está metido em mais uma briga por território. Os inimigos da vez
+              são o vigarista Lance Walters e sua namorada Vanessa. Precisando de dinheiro, eles estão determinados a
+              construir uma extravagante mansão na floresta e lucrar com sua venda, mas Pica-Pau também mora no terreno
+              e não pretende deixá-los fazerem o que quiser.</p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/scoob-doo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Scooby-Doo</h5>
+            <p class="card-text">A equipe da Mystery Inc. une-se para investigar estranhos acontecimentos em um parque
+              mal-assombrado chamado Spook Island. A
+              atração parece assombrar jovens visitantes de maneiras muito estranhas, mas cabe a Scooby, Salsicha, Velma
+              e todo
+              o grupo desvendar o que ocorre no parque</p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/superchoque.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Super Choque</h5>
+            <p class="card-text">Super Choque acompanha o jovem Virgil Hawkins, que ganha poderes eletromagnéticos após
+              um incidente em que foi exposto a um estranho gás. Agora com a ajuda do seu melhor amigo Osgood, ele
+              assume o manto de Super Choque e oferece ajuda aos que precisam dela, além de enfrentar diversos vilões.
+            </p>
+            <a href="./desenhos.html" class="btn btn-primary">Ir assistir...</a>
+            <br>
+          </div>
+        </div>
+      </div><!-- /.col-lg-4 -->
+    </div>
+
+
+    </div>
+    <br> <br>
+        <footer class="position-absolute top-600 start-50 translate-middle">
+            <a href="./programacaododia.html"><button  type="button" class="btn btn-dark "><span>Topo</span></button></a>
+            <br>
+            <br>
+            
+        </footer>
+        <br>
+        <footer class="position-absolute top-1000 start-50 translate-middle">
+            <a href="https://github.com/JaimeeCJ/atividade-web-TDE"> <i class="fa fa-github"></i></a>
+            <a href="https://trello.com/b/ofggxfsn/pi-tele-si"> <i class="fa fa-trello"></i></a>
+        </footer>
+        <br> 
+        <footer class="position-absolute top-700 start-50 translate-middle text-white">
+            <i>Developed by Jaime/Rafaela </i>
+        </footer>
+
+
 
 
 </body>
